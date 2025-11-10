@@ -1,0 +1,79 @@
+[Tue Nov 04 10:48:11.259304 2025] [mpm_prefork:notice] [pid 258:tid 258] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Tue Nov 04 10:48:11.261566 2025] [core:notice] [pid 258:tid 258] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 11:43:41.581765 2025] [core:warn] [pid 254:tid 254] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Nov 04 11:43:41.606315 2025] [mpm_prefork:notice] [pid 254:tid 254] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Tue Nov 04 11:43:41.608011 2025] [core:notice] [pid 254:tid 254] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 14:14:50.322041 2025] [mpm_prefork:notice] [pid 470:tid 470] AH00163: Apache/2.4.65 (Debian) configured -- resuming normal operations
+[Tue Nov 04 14:14:50.325037 2025] [core:notice] [pid 470:tid 470] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 14:17:13.111551 2025] [php:notice] [pid 475:tid 475] [client 172.25.0.1:58358] Database exception: Access denied for user 'nmap_user'@'localhost', referer: http://localhost:8080/index.html
+[Tue Nov 04 14:21:45.616316 2025] [php:notice] [pid 476:tid 476] [client 172.25.0.1:48494] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES)
+[Tue Nov 04 14:23:56.721172 2025] [php:notice] [pid 473:tid 473] [client 172.25.0.1:60822] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES)
+[Tue Nov 04 14:24:36.499560 2025] [php:notice] [pid 474:tid 474] [client 172.25.0.1:55962] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES)
+[Tue Nov 04 14:24:41.236850 2025] [php:notice] [pid 495:tid 495] [client 172.25.0.1:52976] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES)
+[Tue Nov 04 14:25:15.772381 2025] [php:notice] [pid 475:tid 475] [client 127.0.0.1:42892] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES)
+[Tue Nov 04 14:25:21.528767 2025] [php:notice] [pid 477:tid 477] [client 127.0.0.1:44666] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES)
+[Tue Nov 04 14:25:35.208608 2025] [php:error] [pid 476:tid 476] [client 127.0.0.1:58246] script '/var/www/html/index.php' not found or unable to stat
+[Tue Nov 04 14:27:47.060082 2025] [php:notice] [pid 474:tid 474] [client 172.25.0.1:39384] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES), referer: http://localhost:8080/index.html
+[Tue Nov 04 14:27:52.438327 2025] [php:notice] [pid 495:tid 495] [client 172.25.0.1:39398] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://localhost:8080/index.html
+[Tue Nov 04 14:27:52.454984 2025] [php:notice] [pid 495:tid 495] [client 172.25.0.1:39398] Database exception: Access denied for user 'nmap_user'@'localhost' (using password: YES), referer: http://localhost:8080/index.html
+[Tue Nov 04 14:29:44.026915 2025] [mpm_prefork:notice] [pid 499:tid 499] AH00163: Apache/2.4.65 (Debian) configured -- resuming normal operations
+[Tue Nov 04 14:29:44.027390 2025] [core:notice] [pid 499:tid 499] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 14:30:18.572063 2025] [php:notice] [pid 503:tid 503] [client 172.25.0.1:38378] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://localhost:8080/index.html
+[Tue Nov 04 14:30:18.577752 2025] [php:notice] [pid 503:tid 503] [client 172.25.0.1:38378] Database exception: Access denied for user 'nmap_user'@'localhost', referer: http://localhost:8080/index.html
+[Tue Nov 04 14:49:41.410711 2025] [mpm_prefork:notice] [pid 514:tid 514] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Tue Nov 04 14:49:41.426779 2025] [core:notice] [pid 514:tid 514] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 14:49:55.627830 2025] [php:notice] [pid 517:tid 517] [client 172.25.0.1:40924] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://localhost:8080/index.html
+[Tue Nov 04 14:49:56.000427 2025] [php:notice] [pid 517:tid 517] [client 172.25.0.1:40924] Registering user: hakim@gmail.com with password hash: $2y$12$OlzJJ0ptdCqw/..., referer: http://localhost:8080/index.html
+[Tue Nov 04 14:49:56.007273 2025] [php:notice] [pid 517:tid 517] [client 172.25.0.1:40924] User registered successfully: ID=2, Email=hakim@gmail.com, referer: http://localhost:8080/index.html
+[Tue Nov 04 15:05:42.304511 2025] [mpm_prefork:notice] [pid 550:tid 550] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Tue Nov 04 15:05:42.305439 2025] [core:notice] [pid 550:tid 550] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 15:05:54.600464 2025] [php:notice] [pid 552:tid 552] [client 172.25.0.1:56670] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://localhost:8080/index.html
+[Tue Nov 04 15:05:54.962280 2025] [php:notice] [pid 552:tid 552] [client 172.25.0.1:56670] Registering user: hakim@gmail.com with password hash: $2y$12$.GA4f0T0.YMdZ..., referer: http://localhost:8080/index.html
+[Tue Nov 04 15:05:54.966693 2025] [php:notice] [pid 552:tid 552] [client 172.25.0.1:56670] User registered successfully: ID=2, Email=hakim@gmail.com, referer: http://localhost:8080/index.html
+[Tue Nov 04 15:09:45.237786 2025] [mpm_prefork:notice] [pid 525:tid 525] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Tue Nov 04 15:09:45.238071 2025] [core:notice] [pid 525:tid 525] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 04 15:10:00.753823 2025] [php:notice] [pid 526:tid 526] [client 172.25.0.1:43594] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://localhost:8080/index.html
+[Tue Nov 04 15:10:01.070158 2025] [php:notice] [pid 526:tid 526] [client 172.25.0.1:43594] Registering user: hakim@gmail.com with password hash: $2y$12$C2NxQlo9/pBzw..., referer: http://localhost:8080/index.html
+[Tue Nov 04 15:10:01.073976 2025] [php:notice] [pid 526:tid 526] [client 172.25.0.1:43594] User registered successfully: ID=2, Email=hakim@gmail.com, referer: http://localhost:8080/index.html
+[Wed Nov 05 09:05:16.350679 2025] [mpm_prefork:notice] [pid 559:tid 559] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Wed Nov 05 09:05:16.359082 2025] [core:notice] [pid 559:tid 559] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Nov 05 09:06:07.490474 2025] [php:notice] [pid 561:tid 561] [client 172.25.0.1:40706] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://localhost:8080/index.html
+[Wed Nov 05 09:06:07.928235 2025] [php:notice] [pid 561:tid 561] [client 172.25.0.1:40706] Registering user: hakim@gmail.com with password hash: $2y$12$KjhO/Q5f7vSOC..., referer: http://localhost:8080/index.html
+[Wed Nov 05 09:06:07.951215 2025] [php:notice] [pid 561:tid 561] [client 172.25.0.1:40706] User registered successfully: ID=2, Email=hakim@gmail.com, referer: http://localhost:8080/index.html
+[Wed Nov 05 10:12:20.368693 2025] [mpm_prefork:notice] [pid 595:tid 595] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Wed Nov 05 10:12:20.383484 2025] [core:notice] [pid 595:tid 595] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Nov 05 10:21:38.384838 2025] [php:notice] [pid 601:tid 601] [client 172.25.0.1:41052] Registration attempt - Raw input: {"name":"Test User","email":"test@test.com","password":"test1234"}
+[Wed Nov 05 10:21:38.971604 2025] [php:notice] [pid 601:tid 601] [client 172.25.0.1:41052] Registering user: test@test.com with password hash: $2y$12$0hMGoluqbSP3R...
+[Wed Nov 05 10:21:38.989555 2025] [php:notice] [pid 601:tid 601] [client 172.25.0.1:41052] User registered successfully: ID=2, Email=test@test.com
+[Wed Nov 05 14:37:36.909866 2025] [core:warn] [pid 501:tid 501] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 05 14:37:36.918244 2025] [mpm_prefork:notice] [pid 501:tid 501] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Wed Nov 05 14:37:36.918290 2025] [core:notice] [pid 501:tid 501] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Nov 05 14:45:13.666130 2025] [core:warn] [pid 528:tid 528] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 05 14:45:13.715486 2025] [mpm_prefork:notice] [pid 528:tid 528] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Wed Nov 05 14:45:13.719901 2025] [core:notice] [pid 528:tid 528] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed Nov 05 18:16:13.006035 2025] [core:warn] [pid 517:tid 517] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Nov 05 18:16:13.015868 2025] [mpm_prefork:notice] [pid 517:tid 517] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Wed Nov 05 18:16:13.015920 2025] [core:notice] [pid 517:tid 517] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Nov 06 09:26:44.743113 2025] [core:warn] [pid 498:tid 498] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 06 09:26:44.753630 2025] [mpm_prefork:notice] [pid 498:tid 498] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Thu Nov 06 09:26:44.753679 2025] [core:notice] [pid 498:tid 498] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Nov 06 09:29:29.768253 2025] [mpm_prefork:notice] [pid 574:tid 574] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Thu Nov 06 09:29:29.769710 2025] [core:notice] [pid 574:tid 574] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Nov 06 09:36:30.973297 2025] [core:warn] [pid 526:tid 526] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Nov 06 09:36:31.019418 2025] [mpm_prefork:notice] [pid 526:tid 526] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Thu Nov 06 09:36:31.019518 2025] [core:notice] [pid 526:tid 526] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Nov 06 09:46:32.875009 2025] [php:notice] [pid 532:tid 532] [client 60.60.60.6:42860] Registration attempt - Raw input: {"name":"hakim","email":"wisedaniel45@gmail.com","password":"425465832"}, referer: http://60.60.60.56:8080/
+[Thu Nov 06 09:46:34.033495 2025] [php:notice] [pid 532:tid 532] [client 60.60.60.6:42860] Registering user: wisedaniel45@gmail.com with password hash: $2y$12$ajfMhkKGxX5IF..., referer: http://60.60.60.56:8080/
+[Thu Nov 06 09:46:34.094806 2025] [php:notice] [pid 532:tid 532] [client 60.60.60.6:42860] User registered successfully: ID=2, Email=wisedaniel45@gmail.com, referer: http://60.60.60.56:8080/
+[Fri Nov 07 11:07:59.750979 2025] [core:warn] [pid 499:tid 499] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 07 11:07:59.759922 2025] [mpm_prefork:notice] [pid 499:tid 499] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Fri Nov 07 11:07:59.759966 2025] [core:notice] [pid 499:tid 499] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Nov 07 11:27:43.449424 2025] [core:warn] [pid 500:tid 500] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 07 11:27:43.458162 2025] [mpm_prefork:notice] [pid 500:tid 500] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Fri Nov 07 11:27:43.458206 2025] [core:notice] [pid 500:tid 500] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Nov 07 11:29:13.848925 2025] [core:warn] [pid 539:tid 539] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Nov 07 11:29:13.924657 2025] [mpm_prefork:notice] [pid 539:tid 539] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Fri Nov 07 11:29:13.924952 2025] [core:notice] [pid 539:tid 539] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Mon Nov 10 15:32:44.570815 2025] [core:warn] [pid 574:tid 574] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Nov 10 15:32:44.597543 2025] [mpm_prefork:notice] [pid 574:tid 574] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Mon Nov 10 15:32:44.597727 2025] [core:notice] [pid 574:tid 574] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

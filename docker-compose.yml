@@ -1,0 +1,46 @@
+services:
+  vulnerable-target:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vulnerable-target
+    hostname: hakim-vulnerable-target
+    mac_address: de:ad:00:00:be:ef
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "2222:22"       # SSH
+      - "2525:25"       # SMTP
+      - "8080:80"       # HTTP (main web app)
+      - "8443:443"      # HTTPS
+      - "1110:110"      # POP3
+      - "1143:143"      # IMAP
+      - "445:445"       # SMB
+      - "139:139"       # NetBIOS Session (filtered)
+      - "33306:3306"    # MySQL
+      - "9998:9999"    # Custom Banner Service
+      - "137:137/udp"   # NetBIOS Name Service
+      - "138:138/udp"   # NetBIOS Datagram (filtered)
+      - "5353:5353/udp" # mDNS/Zeroconf
+      - "68:68/udp"     # DHCP client (filtered)
+      - "631:631/udp"   # IPP (filtered)
+    networks:
+      vuln_net:
+        ipv4_address: 172.25.0.10
+    restart: unless-stopped
+    volumes:
+      # Optional: Mount logs for easier debugging
+      - ./logs/apache:/var/log/apache2
+      - ./logs/mysql:/var/log/mysql
+    environment:
+      - TZ=UTC
+      - DEBIAN_FRONTEND=noninteractive
+
+networks:
+  vuln_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+          gateway: 172.25.0.1
