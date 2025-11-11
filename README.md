@@ -13,16 +13,16 @@ nmap-training-platform/
 │   ├── init-database.sql
 │   ├── config.php
 │   ├── index.html                 (Login/Signup)
-│   ├── dashboard.html             (Main SPA)
-│   ├── modules.js                 (Content definitions)
-│   ├── app.js                     (SPA logic)
+│   ├── dashboard.html             
+│   ├── modules.js                
+│   ├── app.js                    
 │   └── api/
 │       ├── login.php
 │       ├── register.php
 │       ├── logout.php
 │       ├── progress.php
-│       ├── submit-flag.php        (NEW - to be created)
-│       └── lab-status.php         (NEW - to be created)
+│       ├── submit-flag.php        
+│       └── lab-status.php         
 │
 ├── lab-easy/                       ← Easy Lab Container
 │   └── Dockerfile
