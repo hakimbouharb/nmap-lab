@@ -151,27 +151,27 @@ docker-compose restart lab-hard
 - **Image Size:** ~250 MB
 - **Services:** Apache, PHP, MySQL
 - **Ports:** 8080 (HTTP), 8443 (HTTPS), 33306 (MySQL)
-- **IP:** 172.25.0.10
+- **IP:** 172.30.0.10
 - **Purpose:** User interface, authentication, progress tracking
 
 ### **2. Easy Lab Container**
 - **Image Size:** ~120 MB
 - **Services:** SSH, Apache, FTP (filtered), Telnet (rejected)
-- **IP:** 172.25.0.11
+- **IP:** 172.30.0.11
 - **Flag:** `HTB{3asy_f1r3wall_byp4ss}`
 - **Difficulty:** Basic port scanning
 
 ### **3. Medium Lab Container**
 - **Image Size:** ~220 MB
 - **Services:** SSH, Apache, SMTP, POP3, IMAP, SMB, MySQL
-- **IP:** 172.25.0.12
+- **IP:** 172.30.0.12
 - **Flag:** `HTB{m3d1um_1ds_3vas10n}`
 - **Difficulty:** IDS/IPS evasion required
 
 ### **4. Hard Lab Container**
 - **Image Size:** ~350 MB
 - **Services:** All services + DNS, NTP, SNMP, Redis, mDNS, CUPS
-- **IP:** 172.25.0.13
+- **IP:** 172.30.0.13
 - **Flag:** `HTB{h4rd_st34lthy_sc4n}`
 - **Difficulty:** Advanced stealth techniques required
 
@@ -220,9 +220,9 @@ curl http://localhost:8080/
 ### **Test Lab Containers:**
 ```bash
 # From your host machine (or another container)
-nmap -sS 172.25.0.11  # Easy lab
-nmap -sS 172.25.0.12  # Medium lab
-nmap -sS 172.25.0.13  # Hard lab
+nmap -sS 172.30.0.11  # Easy lab
+nmap -sS 172.30.0.12  # Medium lab
+nmap -sS 172.30.0.13  # Hard lab
 ```
 
 ### **Access Container Shells:**
@@ -252,21 +252,21 @@ docker exec -it nmap-lab-hard bash
                                    │
                     ┌──────────────▼──────────────┐
                     │  Docker Bridge Network      │
-                    │  Subnet: 172.25.0.0/16      │
-                    │  Gateway: 172.25.0.1        │
+                    │  Subnet: 172.30.0.0/16      │
+                    │  Gateway: 172.30.0.1        │
                     └──────────────┬──────────────┘
                                    │
             ┌──────────────────────┼──────────────────────┐
             │                      │                      │
     ┌───────▼────────┐    ┌───────▼────────┐    ┌───────▼────────┐
     │   Dashboard    │    │   Easy Lab     │    │  Medium Lab    │
-    │  172.25.0.10   │    │  172.25.0.11   │    │  172.25.0.12   │
+    │  172.30.0.10   │    │  172.30.0.11   │    │  172.30.0.12   │
     │  (Web + DB)    │    │  (Target 1)    │    │  (Target 2)    │
     └────────────────┘    └────────────────┘    └────────────────┘
                                    │
                           ┌────────▼────────┐
                           │   Hard Lab      │
-                          │  172.25.0.13    │
+                          │  172.30.0.13    │
                           │  (Target 3)     │
                           └─────────────────┘
 ```
@@ -283,17 +283,17 @@ docker exec -it nmap-lab-hard bash
 4. **Complete Theory Modules:** Go through all tutorial sections
 5. **Easy Lab:** 
    - Unlock automatically
-   - Scan 172.25.0.11
+   - Scan 172.30.0.11
    - Find flag
    - Submit flag to unlock Medium Lab
 6. **Medium Lab:**
    - Unlocked after Easy Lab completion
-   - Scan 172.25.0.12
+   - Scan 172.30.0.12
    - Use evasion techniques
    - Submit flag to unlock Hard Lab
 7. **Hard Lab:**
    - Unlocked after Medium Lab completion
-   - Scan 172.25.0.13
+   - Scan 172.30.0.13
    - Use advanced stealth techniques
    - Submit final flag
 
@@ -352,8 +352,8 @@ docker exec -it nmap-dashboard tail -f /var/log/apache2/error.log
 docker network inspect nmap-training-platform_training_network
 
 # Test connectivity from dashboard to labs
-docker exec -it nmap-dashboard ping 172.25.0.11
-docker exec -it nmap-dashboard nmap 172.25.0.11
+docker exec -it nmap-dashboard ping 172.30.0.11
+docker exec -it nmap-dashboard nmap 172.30.0.11
 ```
 
 ### **Problem: Database errors**
