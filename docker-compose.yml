@@ -1,46 +1,102 @@
 services:
-  vulnerable-target:
+  # Main Dashboard Container
+  dashboard:
     build:
-      context: .
+      context: ./main
       dockerfile: Dockerfile
-    container_name: vulnerable-target
-    hostname: hakim-vulnerable-target
-    mac_address: de:ad:00:00:be:ef
+    container_name: nmap-dashboard
+    hostname: nmap-dashboard
+    ports:
+      - "8080:80"        # HTTP Web Interface
+      - "8443:443"       # HTTPS Web Interface
+      - "33306:3306"     # MySQL (for external access if needed)
+    networks:
+      training_network:
+        ipv4_address: 172.30.0.10
+    restart: unless-stopped
+    volumes:
+      - dashboard_data:/var/lib/mysql
+      - ./logs/dashboard:/var/log/apache2
+    environment:
+      - TZ=UTC
+      - MYSQL_ROOT_PASSWORD=rootpass123
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Easy Lab Container
+  lab-easy:
+    build:
+      context: ./lab-easy
+      dockerfile: Dockerfile
+    container_name: nmap-lab-easy
+    hostname: easy-target
+    mac_address: de:ad:00:00:00:01
     privileged: true
     cap_add:
       - NET_ADMIN
-    ports:
-      - "2222:22"       # SSH
-      - "2525:25"       # SMTP
-      - "8080:80"       # HTTP (main web app)
-      - "8443:443"      # HTTPS
-      - "1110:110"      # POP3
-      - "1143:143"      # IMAP
-      - "445:445"       # SMB
-      - "139:139"       # NetBIOS Session (filtered)
-      - "33306:3306"    # MySQL
-      - "9998:9999"    # Custom Banner Service
-      - "137:137/udp"   # NetBIOS Name Service
-      - "138:138/udp"   # NetBIOS Datagram (filtered)
-      - "5353:5353/udp" # mDNS/Zeroconf
-      - "68:68/udp"     # DHCP client (filtered)
-      - "631:631/udp"   # IPP (filtered)
     networks:
-      vuln_net:
-        ipv4_address: 172.25.0.10
+      training_network:
+        ipv4_address: 172.30.0.11
     restart: unless-stopped
-    volumes:
-      # Optional: Mount logs for easier debugging
-      - ./logs/apache:/var/log/apache2
-      - ./logs/mysql:/var/log/mysql
+    depends_on:
+      - dashboard
     environment:
       - TZ=UTC
-      - DEBIAN_FRONTEND=noninteractive
+      - LAB_DIFFICULTY=easy
+
+  # Medium Lab Container
+  lab-medium:
+    build:
+      context: ./lab-medium
+      dockerfile: Dockerfile
+    container_name: nmap-lab-medium
+    hostname: medium-target
+    mac_address: de:ad:00:00:00:02
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    networks:
+      training_network:
+        ipv4_address: 172.30.0.12
+    restart: unless-stopped
+    depends_on:
+      - dashboard
+    environment:
+      - TZ=UTC
+      - LAB_DIFFICULTY=medium
+
+  # Hard Lab Container
+  lab-hard:
+    build:
+      context: ./lab-hard
+      dockerfile: Dockerfile
+    container_name: nmap-lab-hard
+    hostname: hard-target
+    mac_address: de:ad:00:00:00:03
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    networks:
+      training_network:
+        ipv4_address: 172.30.0.13
+    restart: unless-stopped
+    depends_on:
+      - dashboard
+    environment:
+      - TZ=UTC
+      - LAB_DIFFICULTY=hard
 
 networks:
-  vuln_net:
+  training_network:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.25.0.0/16
-          gateway: 172.25.0.1
+        - subnet: 172.30.0.0/24
+          gateway: 172.30.0.1
+
+volumes:
+  dashboard_data:
+    driver: local

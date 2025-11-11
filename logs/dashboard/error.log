@@ -1,0 +1,5 @@
+[Tue Nov 11 13:21:10.819132 2025] [mpm_prefork:notice] [pid 265:tid 265] AH00163: Apache/2.4.65 (Debian) OpenSSL/3.5.1 configured -- resuming normal operations
+[Tue Nov 11 13:21:10.821867 2025] [core:notice] [pid 265:tid 265] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Tue Nov 11 13:28:42.727226 2025] [php:notice] [pid 281:tid 281] [client 60.60.60.6:42753] Registration attempt - Raw input: {"name":"hakim","email":"hakim@gmail.com","password":"425465832"}, referer: http://60.60.60.56:8080/
+[Tue Nov 11 13:28:43.434372 2025] [php:notice] [pid 281:tid 281] [client 60.60.60.6:42753] Registering user: hakim@gmail.com with password hash: $2y$12$yYnA430AuELbA..., referer: http://60.60.60.56:8080/
+[Tue Nov 11 13:28:43.475505 2025] [php:notice] [pid 281:tid 281] [client 60.60.60.6:42753] User registered successfully: ID=2, Email=hakim@gmail.com, referer: http://60.60.60.56:8080/
