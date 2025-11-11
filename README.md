@@ -65,20 +65,20 @@ Copy the following files into their respective directories:
 
 #### **main/ directory:**
 - `Dockerfile` ← Dashboard container
-- `init-database.sql` ← From previous conversation
-- `config.php` ← From previous conversation
-- `index.html` ← Login page (FINAL version)
-- `dashboard.html` ← SPA dashboard (to be updated with new structure)
-- `modules.js` ← Content for each section (NEW)
-- `app.js` ← SPA logic (NEW)
+- `init-database.sql` 
+- `config.php` 
+- `index.html` 
+- `dashboard.html` 
+- `modules.js` 
+- `app.js` 
 
 #### **main/api/ directory:**
-- `login.php` ← From previous conversation
-- `register.php` ← From previous conversation
-- `logout.php` ← From previous conversation
-- `progress.php` ← From previous conversation
-- `submit-flag.php` ← (Need to create)
-- `lab-status.php` ← (Need to create)
+- `login.php` 
+- `register.php`
+- `logout.php` 
+- `progress.php` 
+- `submit-flag.php` 
+- `lab-status.php` 
 
 #### **lab-easy/ directory:**
 - `Dockerfile` ← Easy lab container
